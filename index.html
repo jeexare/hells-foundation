@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Skin gratis para foroactivo" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Gabriela Rubio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>Hell's Foundation</title>
+</head>
+
+<body>
+    <!-- Fondo semitransparente que aparece cuando el sidebar móvil está activo -->
+    <div id="overlay" class="hidden" onclick="hideSidebar()"></div>
+
+    <!-- Menú lateral móvil (solo visible cuando se activa) -->
+    <div id="mobile-sidebar">
+        <img src="https://placehold.co/100x100" />
+        <div class="nav-username">Hola, <span>David Weber</span></div>
+    </div>
+
+    <!-- Contenedor principal del foro -->
+    <div class="hf-index">
+
+        <!-- Encabezado del foro -->
+        <header>Hell's Foundation</header>
+
+        <!-- Barra de navegación superior -->
+        <nav>
+            <div id="nav-user" onclick="handleNavUserClick()">
+                <img src="https://placehold.co/100x100" />
+                <div class="nav-username">Hola, <span>David Weber</span></div>
+            </div>
+        </nav>
+
+        <!-- Sección para el tablón de anuncios -->
+        <section class="hf-announcements">Tablón de anuncions</section>
+
+        <!-- Sección para categorías y subforos -->
+
+        <section class="hf-categories">Categorias y Subforos</section>
+        <!-- Sección de estadísticas del foro -->
+
+        <section class="hf-stats">Estadísticas</section>
+
+        <!-- Pie de página -->
+        <footer>Footer</footer>
+
+        <!-- Navegación inferior móvil (visible en pantallas pequeñas) -->
+        <div class="mobile-nav">
+            <span class="mobile-home">Índice</span>
+            <span class="mobile-settings">Perfil</span>
+            <span class="mobile-signinout">Salir</span>
+            <span class="mobile-signup">Registrarse</span>
+        </div>
+    </div>
+
+    <!-- Script JavaScript principal -->
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+/* ------------------------------------ */
+
+
+/* CARGA DE FUENTE PERSONALIZADA        */
+
+
+/* ------------------------------------ */
+
+@font-face {
+    font-family: "Nowharehouse";
+    src: url("/assets/Nowharehouse.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ------------------------------------ */
+
+
+/* VARIABLES GLOBALES                   */
+
+
+/* ------------------------------------ */
+
+:root {
+    --header: "Nowharehouse";
+    --main: Roboto, sans-serif;
+    --black: #030303;
+    --black-op-8: rgb(0, 0, 0, 0.8);
+    --white: #cecece;
+    --background: var(--black);
+    --color: var(--white);
+    /* Breakpoints para diseño responsivo */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+}
+
+
+/* ------------------------------------ */
+
+
+/* RESET GENERAL                        */
+
+
+/* ------------------------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------------------------------ */
+
+
+/* CUERPO Y TEXTO BASE                  */
+
+
+/* ------------------------------------ */
+
+body {
+    background: var(--background);
+    color: var(--color);
+    /* padding: 1rem; */
+    font-family: var(--main);
+}
+
+
+/* Evita el scroll cuando está activa la sidebar móvil */
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--black-op-8);
+    z-index: 999;
+    height: 100vh;
+}
+
+
+/* Fondo oscuro semitransparente para overlay móvil */
+
+.hidden {
+    display: none;
+}
+
+.hf-index {}
+
+
+/* ------------------------------------ */
+
+
+/* ENCABEZADO                           */
+
+
+/* ------------------------------------ */
+
+header {
+    grid-area: header;
+    font-family: var(--header);
+    width: 100vw;
+    height: 300px;
+    position: relative;
+    font-size: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+    align-items: end;
+}
+
+
+/* ------------------------------------ */
+
+
+/* NAVBAR SUPERIOR                      */
+
+
+/* ------------------------------------ */
+
+nav {
+    background: var(--black);
+    width: 100vw;
+    height: 2.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Info de usuario en navbar */
+
+#nav-user {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 0.5rem;
+}
+
+#nav-user img {
+    border-radius: 100%;
+    width: 25px;
+}
+
+.nav-username {}
+
+.nav-username span {
+    font-weight: 900;
+}
+
+
+/* ------------------------------------ */
+
+
+/* SIDEBAR MÓVIL                        */
+
+
+/* ------------------------------------ */
+
+#mobile-sidebar {
+    background: blue;
+    width: calc(100vw - 2rem);
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+
+/* Activa la sidebar móvil */
+
+#mobile-sidebar.active {
+    display: block;
+}
+
+
+/* ------------------------------------ */
+
+
+/* NAVBAR INFERIOR MÓVIL                */
+
+
+/* ------------------------------------ */
+
+.mobile-nav {
+    grid-area: nav;
+    background: var(--black-op-8);
+    position: fixed;
+    height: 4rem;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-areas: "home settings signinout signup";
+    grid-gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* Áreas de la navbar móvil */
+
+.mobile-home {
+    grid-area: home;
+}
+
+.mobile-settings {
+    grid-area: settings;
+}
+
+.mobile-signinout {
+    grid-area: signinout;
+}
+
+.mobile-signup {
+    grid-area: signup;
+}
+
+
+/* ------------------------------------ */
+
+
+/* SECCIONES DEL FORO                   */
+
+
+/* ------------------------------------ */
+
+section.hf-announcements {
+    grid-area: announcements;
+    background: green;
+    height: 100vw;
+    display: none;
+}
+
+section.hf-categories {
+    grid-area: categories;
+    background: hotpink;
+    height: 100vw;
+}
+
+section.hf-stats {
+    grid-area: stats;
+    background: violet;
+    height: 100vw;
+}
+
+footer {
+    grid-area: footer;
+    background: teal;
+    height: 100vw;
+    margin-bottom: 4rem;
+    /* Espacio para la navbar móvil */
+}
+
+
+/* ------------------------------------ */
+
+
+/* MEDIA QUERIES                        */
+
+
+/* ------------------------------------ */
+
+
+/* Pantallas medianas (tablets) */
+
+@media (min-width: 768px) {
+    body {
+        background: lightblue;
+    }
+    /* Oculta la navbar inferior en pantallas medianas */
+    .mobile-nav {
+        display: none;
+    }
+    footer {
+        margin-bottom: 0;
+    }
+    /* Muestra tablón de anuncios en pantallas más grandes */
+    section.hf-announcements {
+        display: block;
+    }
+}
+
+
+/* Pantallas grandes */
+
+@media (min-width: 1024px) {
+    body {
+        background: green;
+    }
+}
+
+
+/* Pantallas muy grandes */
+
+@media (min-width: 1280px) {
+    body {
+        background: hotpink;
+    }
+}
