@@ -502,16 +502,140 @@ section.hf-categories .hf-category .hf-forum-list .hf-forum .hf-forum-lastpost i
 
 section.hf-stats {
     grid-area: stats;
-    background: violet;
     margin-top: 20px;
+    display: grid;
+    grid-template-areas: "news" "online" "last24" "groups" "newer" "stats" "creds" "bluedrxgs";
+    border-top: 1px solid var(--border);
+}
+
+section.hf-stats .stats-newer {
+    grid-area: newer;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #333333;
+    font-size: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+section.hf-stats .stats-stats {
+    grid-area: stats;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section.hf-stats .stats-stats span {}
+
+section.hf-stats .stats-stats span b {
+    color: var(--accent);
+}
+
+section.hf-stats .stats-groups {
+    grid-area: groups;
+    border-bottom: 1px solid var(--border);
+    box-sizing: border-box;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section.hf-stats .stats-groups a {
+    background: #333333;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: var(--header);
+    text-decoration: none;
+    color: var(--groups);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hf-stats .stats-online {
+    grid-area: online;
+    border-bottom: 1px solid var(--border);
+    box-sizing: border-box;
+    padding: 20px 10px;
+    text-align: justify;
+    text-transform: lowercase;
+}
+
+section.hf-stats .stats-last24 {
+    grid-area: last24;
+    border-bottom: 1px solid var(--border);
+    box-sizing: border-box;
+    padding: 20px 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+section.hf-stats .stats-news {
+    grid-area: news;
+    border-bottom: 1px solid var(--border);
+    box-sizing: border-box;
+    padding: 20px 10px;
+}
+
+section.hf-stats .stats-news span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+section.hf-stats .stats-news span b {
+    background: var(--accent);
+    font-weight: 300;
+    padding: 0px 5px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hf-stats .stats-creds {
+    grid-area: creds;
+    border-bottom: 1px solid var(--bottom);
+    padding: 20px 10px;
+    text-align: justify;
+}
+
+section.hf-stats .bluedrxgs {
+    grid-area: bluedrxgs;
+    background: #333333;
+    padding: 20px;
+    border-bottom: 1px solid var(--bottom);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+    text-transform: lowercase;
+    font-weight: 900;
 }
 
 footer {
     grid-area: footer;
-    background: teal;
-    margin-top: 20px;
-    margin-bottom: 4rem;
     /* Espacio para la navbar móvil */
+    margin-bottom: 4rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    text-align-last: center;
+    flex-direction: column;
 }
 
 
@@ -539,6 +663,8 @@ footer {
     }
     footer {
         margin-bottom: 0;
+        justify-content: space-between;
+        flex-direction: row;
     }
     /* Muestra tablón de anuncios en pantallas más grandes */
     section.hf-announcements {
