@@ -163,8 +163,18 @@ nav {
 
 .nav-username {}
 
-.nav-username span {
+.nav-username span {}
+
+.nav-username b {
     font-weight: 900;
+}
+
+.nav-username ul {
+    display: none;
+}
+
+#nav-links {
+    display: none;
 }
 
 
@@ -184,7 +194,7 @@ nav {
     z-index: 1000;
     top: 0;
     transform: translateX(-30rem);
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     box-sizing: border-box;
 }
 
@@ -193,7 +203,7 @@ nav {
 
 #mobile-sidebar.active {
     transform: translateX(0);
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .side-character {
@@ -401,11 +411,150 @@ nav {
 
 section.hf-announcements {
     grid-area: announcements;
-    /*TODO: REMOVE*/
-    background: green;
-    /*TODO: REMOVE*/
-    height: 100vw;
+    height: 300px;
     display: none;
+    grid-template-areas: "image text events lastest" "links links links links";
+    margin-top: 20px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    grid-template-columns: 1fr 2fr 1fr 1.5fr;
+}
+
+.hf-announcements-img {
+    grid-area: image;
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    width: 250px;
+    box-sizing: border-box;
+    height: 250px;
+}
+
+.hf-announcements-img img {
+    width: 210px;
+}
+
+.hf-announcements-txt {
+    grid-area: text;
+    height: 250px;
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+.hf-announcements-txt-title {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.hf-announcements-txt-desc {
+    height: 90%;
+}
+
+section.hf-announcements .side-links {
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    grid-area: links;
+    flex-wrap: nowrap;
+    text-transform: uppercase;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border);
+}
+
+section.hf-announcements .side-links a {
+    text-decoration: none;
+    color: var(--color);
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+section.hf-announcements .side-links b {
+    font-weight: 900;
+    /* TODO: Switch to var(--groups) */
+    background: var(--accent);
+    padding: 0px 10px;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+section.hf-announcements .side-lastest {
+    padding: 20px 10px;
+    grid-area: lastest;
+    height: 250px;
+}
+
+section.hf-announcements .side-lastest a.lastest-thread {
+    /* TODO: Add to variable */
+    background: #0f0f0f;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section.hf-announcements .side-lastest a.lastest-thread:first-of-type {
+    margin-top: 0px;
+}
+
+section.hf-announcements .side-lastest a.lastest-thread span:first-of-type {
+    /* TODO: Switch to var(--groups) */
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+section.hf-announcements .side-lastest a.lastest-thread span b {
+    color: var(--groups);
+}
+
+section.hf-announcements .side-events {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    grid-area: events;
+    height: 250px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--border);
+}
+
+section.hf-announcements .side-events a.my-event {
+    /* TODO: Add to variable */
+    background: #0f0f0f;
+    height: 80px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color);
+}
+
+section.hf-announcements .side-events a.my-event b {
+    font-family: var(--header);
+    /* TODO: Add to root */
+    color: #333333;
+}
+
+section.hf-announcements .side-events a.my-event span {
+    font-size: 10px;
 }
 
 section.hf-categories {
@@ -453,7 +602,7 @@ section.hf-categories .hf-category .hf-forum-list .hf-forum .hf-forum-desc {
     border-bottom: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
 }
 
 section.hf-categories .hf-category .hf-forum-list .hf-forum .hf-forum-desc-links {
@@ -652,7 +801,7 @@ footer {
 
 @media (min-width: 768px) {
     body {
-        background: lightblue;
+        /* background: lightblue; */
     }
     /* Oculta la navbar inferior en pantallas medianas */
     .mobile-nav {
@@ -668,7 +817,57 @@ footer {
     }
     /* Muestra tablón de anuncios en pantallas más grandes */
     section.hf-announcements {
-        display: block;
+        display: grid;
+    }
+    nav {
+        height: 75px;
+        padding: 0px 20px;
+    }
+    #nav-user img {
+        width: 50px;
+    }
+    .nav-username ul {
+        display: flex;
+        list-style-type: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        gap: 5px;
+    }
+    .nav-username ul li a {
+        text-decoration: none;
+        color: var(--grey);
+        font-size: 12px;
+    }
+    .nav-username ul li a:hover {
+        color: var(--accent);
+    }
+    #nav-links {
+        display: flex;
+        gap: 10px;
+        text-transform: uppercase;
+    }
+    #nav-links a {
+        text-decoration: none;
+        color: var(--color);
+        transition: 0.3s ease-in-out;
+    }
+    #nav-links a:hover {
+        border-bottom: 2px solid var(--accent);
+        font-weight: 900;
+        transition: 0.3s ease-in-out;
+    }
+    section.hf-categories {
+        border-top: 1px solid var(--border);
+    }
+    .hf-category-name {
+        padding: 20px 60px!important;
+        text-transform: uppercase;
+        font-size: 30px!important;
+    }
+    .hf-forum-name {
+        text-transform: uppercase;
+        padding: 20px 40px!important;
     }
 }
 
@@ -677,7 +876,7 @@ footer {
 
 @media (min-width: 1024px) {
     body {
-        background: green;
+        /* background: green; */
     }
 }
 
@@ -686,6 +885,6 @@ footer {
 
 @media (min-width: 1280px) {
     body {
-        background: hotpink;
+        /* background: hotpink; */
     }
 }
