@@ -652,6 +652,11 @@ section.hf-categories .hf-category .hf-forum-list .hf-forum {
     border-top: 1px solid var(--border);
 }
 
+.hf-forum-image,
+.hf-forum-image2 {
+    display: none;
+}
+
 section.hf-categories .hf-category .hf-forum-list .hf-forum a.hf-forum-name {
     font-family: var(--serif);
     color: var(--accent);
@@ -710,11 +715,20 @@ section.hf-categories .hf-category .hf-forum-list .hf-forum .hf-forum-lastpost a
     color: var(--color);
 }
 
+.last-poster {
+    background: var(--groups);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
 section.hf-categories .hf-category .hf-forum-list .hf-forum .hf-forum-lastpost img {
     width: 30px;
     height: 30px;
     border-radius: 100%;
     object-fit: cover;
+    filter: grayscale(1);
+    mix-blend-mode: multiply;
 }
 
 section.hf-stats {
@@ -938,9 +952,48 @@ footer {
         text-transform: uppercase;
         font-size: 30px!important;
     }
+    .hf-forum {
+        height: 230px;
+        background: var(--groups);
+        display: grid!important;
+        grid-template-areas: "image name image2" "image desc image2" "image last image2";
+        grid-template-columns: 30px 1fr .5fr;
+        grid-template-rows: 1fr 120px 40px;
+    }
+    .hf-forum-image {
+        grid-area: image;
+        display: block;
+        filter: grayscale(1);
+        mix-blend-mode: multiply;
+        background-size: cover;
+    }
+    .hf-forum-image2 {
+        grid-area: image2;
+        display: block;
+        filter: grayscale(1);
+        mix-blend-mode: multiply;
+        background-size: cover;
+    }
     .hf-forum-name {
+        grid-area: name;
         text-transform: uppercase;
-        padding: 20px 40px!important;
+        padding: 0px!important;
+        padding: 0px 40px!important;
+        height: auto!important;
+        background: var(--black);
+        display: flex;
+        align-items: center;
+    }
+    .hf-forum-desc {
+        grid-area: desc;
+        background: var(--black);
+    }
+    .hf-forum-lastpost {
+        grid-area: last;
+        background: var(--black);
+        padding: 0px 20px!important;
+        text-transform: uppercase;
+        font-size: 12px;
     }
     section.hf-stats {
         grid-template-areas: "news news news news" "newer online online creds" "stats online online creds" "groups online online creds" "groups last24 last24 bluedrxgs";
