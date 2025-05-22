@@ -266,7 +266,7 @@ nav {
     padding: 20px;
 }
 
-.side-character button.notif-button {
+button.notif-button {
     font-weight: 900;
     color: var(--color);
     background: transparent;
@@ -319,14 +319,14 @@ nav {
     border-radius: 30px;
 }
 
-.side-links {
+#side-links {
     border-bottom: 1px solid var(--border);
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.side-links a {
+#side-links a {
     text-decoration: none;
     color: var(--color);
     width: 50%;
@@ -336,7 +336,7 @@ nav {
     gap: 10px;
 }
 
-.side-links b {
+#side-links b {
     font-weight: 900;
     background: var(--groups);
     padding: 0px 10px;
@@ -385,13 +385,13 @@ nav {
     color: var(--groups);
 }
 
-.side-events {
+#side-events {
     padding: 20px;
     display: flex;
     gap: 10px;
 }
 
-.side-events a.my-event {
+#side-events a.my-event {
     /* TODO: Add to variable */
     background: #0f0f0f;
     height: 80px;
@@ -405,13 +405,13 @@ nav {
     color: var(--color);
 }
 
-.side-events a.my-event b {
+#side-events a.my-event b {
     font-family: var(--header);
     /* TODO: Add to root */
     color: #333333;
 }
 
-.side-events a.my-event span {
+#side-events a.my-event span {
     font-size: 10px;
 }
 
@@ -520,7 +520,7 @@ section.hf-announcements {
     height: 90%;
 }
 
-section.hf-announcements .side-links {
+section.hf-announcements #announ-links {
     border-bottom: 1px solid var(--border);
     padding: 20px;
     display: flex;
@@ -533,7 +533,7 @@ section.hf-announcements .side-links {
     border-top: 1px solid var(--border);
 }
 
-section.hf-announcements .side-links a {
+section.hf-announcements #announ-links a {
     text-decoration: none;
     color: var(--color);
     width: 50%;
@@ -543,9 +543,8 @@ section.hf-announcements .side-links a {
     gap: 10px;
 }
 
-section.hf-announcements .side-links b {
+section.hf-announcements #announ-links b {
     font-weight: 900;
-    /* TODO: Switch to var(--groups) */
     background: var(--accent);
     padding: 0px 10px;
     font-size: 10px;
@@ -576,7 +575,6 @@ section.hf-announcements .side-lastest a.lastest-thread:first-of-type {
 }
 
 section.hf-announcements .side-lastest a.lastest-thread span:first-of-type {
-    /* TODO: Switch to var(--groups) */
     color: var(--accent);
     font-weight: 900;
     font-size: 20px;
@@ -586,7 +584,7 @@ section.hf-announcements .side-lastest a.lastest-thread span b {
     color: var(--groups);
 }
 
-section.hf-announcements .side-events {
+section.hf-announcements #announ-events {
     padding: 20px;
     display: flex;
     gap: 10px;
@@ -598,7 +596,7 @@ section.hf-announcements .side-events {
     border-right: 1px solid var(--border);
 }
 
-section.hf-announcements .side-events a.my-event {
+section.hf-announcements #announ-events a.my-event {
     /* TODO: Add to variable */
     background: #0f0f0f;
     height: 80px;
@@ -615,13 +613,13 @@ section.hf-announcements .side-events a.my-event {
     color: var(--color);
 }
 
-section.hf-announcements .side-events a.my-event b {
+section.hf-announcements #announ-events a.my-event b {
     font-family: var(--header);
     /* TODO: Add to root */
     color: #333333;
 }
 
-section.hf-announcements .side-events a.my-event span {
+section.hf-announcements #announ-events a.my-event span {
     font-size: 10px;
 }
 
