@@ -47,10 +47,6 @@ nav {
     mix-blend-mode: multiply;
 }
 
-.nav-username {}
-
-.nav-username span {}
-
 .nav-username b {
     font-weight: 900;
 }
