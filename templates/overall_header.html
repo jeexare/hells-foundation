@@ -253,6 +253,78 @@
 </head>
 
 <body id="phpbb">
+    <!-- Fondo semitransparente que aparece cuando el sidebar móvil está activo -->
+    <div id="overlay" class="hidden" onclick="hideSidebar()"></div>
+
+    <!-- Menú lateral móvil (solo visible cuando se activa) -->
+    <div id="mobile-sidebar" class="rojos">
+        <!-- Perfil del usuario en el sidebar -->
+        <div class="side-character">
+            <button class="notif-button" aria-label="Notificaciones">!</button>
+            <div class="side-character-img">
+                <img src="https://i.pinimg.com/736x/d3/37/ba/d337ba495c180d816869f85ae50d9492.jpg" />
+            </div>
+            <div class="side-username">
+                David Weber
+                <ul>
+                    <li><a href="">Mensajes</a></li>
+                    <li><a href="">Temas</a></li>
+                    <li><a href="">Posts</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navegación del foro dentro del sidebar -->
+        <div id="side-links">
+        </div>
+
+        <!-- Lista de últimos temas creados o actualizados -->
+        <div class="side-lastest">
+            <div class="content-scroll">
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="staff">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="rojos">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="verdes">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="verdes">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="naranjas">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="rojos">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="verdes">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="naranjas">character</b></span>
+                </a>
+                <a class="lastest-thread">
+                    <span>Titulo del tema</span>
+                    <span>Fecha hora por <b class="staff">character</b></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Eventos o noticias destacadas -->
+        <div id="side-events">
+        </div>
+    </div>
+
     <!-- BEGIN switch_h1 -->
     <header>{switch_h1.MAIN_SITENAME}</header>
     <!-- END switch_h1 -->

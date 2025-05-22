@@ -763,8 +763,6 @@ section.hf-stats .bluedrxgs {
 
 footer {
     grid-area: footer;
-    /* Espacio para la navbar móvil */
-    margin-bottom: 4rem;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     padding: 20px;
@@ -776,6 +774,8 @@ footer {
     text-align: justify;
     text-align-last: center;
     flex-direction: column;
+    /* Espacio para la navbar móvil */
+    padding-bottom: 50px;
 }
 
 
@@ -802,7 +802,7 @@ footer {
         display: none;
     }
     footer {
-        margin-bottom: 0;
+        padding-bottom: 0;
         justify-content: space-between;
         flex-direction: row;
     }
