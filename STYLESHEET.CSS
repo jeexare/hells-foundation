@@ -1,0 +1,141 @@
+/* ------------------------------------ */
+
+
+/* CARGA DE FUENTE PERSONALIZADA        */
+
+
+/* ------------------------------------ */
+
+@font-face {
+    font-family: "Nowharehouse";
+    src: url("/assets/Nowharehouse.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ------------------------------------ */
+
+
+/* VARIABLES GLOBALES                   */
+
+
+/* ------------------------------------ */
+
+:root {
+    /* Fuentes */
+    --header: "Nowharehouse";
+    --main: Roboto, sans-serif;
+    --serif: "Playfair Display";
+    /* Colores básicos */
+    --black: #030303;
+    --black2: #101010;
+    --black3: #323232;
+    --black-op-8: rgb(0, 0, 0, 0.8);
+    --white: #cecece;
+    --grey: #787878;
+    --accent: #75613b;
+    --background: var(--black);
+    --background2: var(--black3);
+    --border: var(--black2);
+    --color: var(--white);
+    /* Breakpoints para diseño responsivo */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    /* Grupos del foro */
+    --staff: var(--accent);
+    --groups: var(--accent);
+    --rojos: #864043;
+    --naranjas: #864d40;
+    --verdes: #5f753b;
+    --inactivos: #777777;
+}
+
+#staff,
+.staff {
+    --groups: var(--accent);
+}
+
+#rojos,
+.rojos {
+    --groups: var(--rojos);
+}
+
+#naranjas,
+.naranjas {
+    --groups: var(--naranjas);
+}
+
+#verdes,
+.verdes {
+    --groups: var(--verdes);
+}
+
+#inactivos,
+.inactivos {
+    --groups: var(--inactivos);
+}
+
+.stats-online b,
+.stats-newer b,
+.stats-last24 b {
+    color: var(--groups);
+}
+
+
+/* ------------------------------------ */
+
+
+/* RESET GENERAL                        */
+
+
+/* ------------------------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------------------------------ */
+
+
+/* CUERPO Y TEXTO BASE                  */
+
+
+/* ------------------------------------ */
+
+body {
+    background: var(--background);
+    color: var(--color);
+    /* padding: 1rem; */
+    font-family: var(--main);
+}
+
+
+/* Evita el scroll cuando está activa la sidebar móvil */
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--black-op-8);
+    z-index: 999;
+    height: 100vh;
+}
+
+
+/* Fondo oscuro semitransparente para overlay móvil */
+
+.hidden {
+    display: none;
+}
+
+.hf-index {}
