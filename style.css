@@ -23,9 +23,11 @@
 /* ------------------------------------ */
 
 :root {
+    /* Fuentes */
     --header: "Nowharehouse";
     --main: Roboto, sans-serif;
     --serif: "Playfair Display";
+    /* Colores básicos */
     --black: #030303;
     --black2: #101010;
     --black3: #323232;
@@ -42,6 +44,44 @@
     --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     --breakpoint-xl: 1280px;
+    /* Grupos del foro */
+    --staff: var(--accent);
+    --groups: var(--accent);
+    --rojos: #864043;
+    --naranjas: #864d40;
+    --verdes: #5f753b;
+    --inactivos: #777777;
+}
+
+#staff,
+.staff {
+    --groups: var(--accent);
+}
+
+#rojos,
+.rojos {
+    --groups: var(--rojos);
+}
+
+#naranjas,
+.naranjas {
+    --groups: var(--naranjas);
+}
+
+#verdes,
+.verdes {
+    --groups: var(--verdes);
+}
+
+#inactivos,
+.inactivos {
+    --groups: var(--inactivos);
+}
+
+.stats-online b,
+.stats-newer b,
+.stats-last24 b {
+    color: var(--groups);
 }
 
 
@@ -157,9 +197,20 @@ nav {
     gap: 0.5rem;
 }
 
+.img-navbar {
+    width: 25px;
+    height: 25px;
+    background: var(--groups);
+    border-radius: 100%;
+    border: 1px solid var(--border);
+}
+
 #nav-user img {
     border-radius: 100%;
     width: 25px;
+    height: 25px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
 }
 
 .nav-username {}
@@ -225,10 +276,19 @@ nav {
     font-size: 20px;
 }
 
+.side-character-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: var(--groups);
+}
+
 .side-character img {
     width: 60px;
     height: 60px;
     border-radius: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
 }
 
 .side-character .side-username {
@@ -253,8 +313,7 @@ nav {
 .side-character .side-username ul li a {
     text-decoration: none;
     color: var(--color);
-    /* TODO: Switch to var(--groups) */
-    background: var(--accent);
+    background: var(--groups);
     box-sizing: border-box;
     padding: 5px 10px;
     border-radius: 30px;
@@ -279,8 +338,7 @@ nav {
 
 .side-links b {
     font-weight: 900;
-    /* TODO: Switch to var(--groups) */
-    background: var(--accent);
+    background: var(--groups);
     padding: 0px 10px;
     font-size: 10px;
     font-weight: 300;
@@ -318,8 +376,7 @@ nav {
 }
 
 .side-lastest a.lastest-thread span:first-of-type {
-    /* TODO: Switch to var(--groups) */
-    color: var(--accent);
+    color: var(--groups);
     font-weight: 900;
     font-size: 20px;
 }
@@ -418,20 +475,28 @@ section.hf-announcements {
     margin-top: 20px;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    grid-template-columns: 1fr 2fr 1fr 1.5fr;
+    grid-template-columns: 250px 1fr 1fr 1fr;
 }
 
 .hf-announcements-img {
     grid-area: image;
     padding: 20px;
     border-right: 1px solid var(--border);
-    width: 250px;
     box-sizing: border-box;
     height: 250px;
 }
 
+.hf-announcements-img-container {
+    width: 210px;
+    height: 210px;
+    background: var(--accent);
+}
+
 .hf-announcements-img img {
     width: 210px;
+    height: 210px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
 }
 
 .hf-announcements-txt {
@@ -528,7 +593,6 @@ section.hf-announcements .side-events {
     flex-wrap: wrap;
     grid-area: events;
     height: 250px;
-    width: 200px;
     justify-content: center;
     align-items: center;
     border-right: 1px solid var(--border);
@@ -538,7 +602,10 @@ section.hf-announcements .side-events a.my-event {
     /* TODO: Add to variable */
     background: #0f0f0f;
     height: 80px;
-    width: 70px;
+    min-width: initial;
+    width: 45%;
+    padding: 10px;
+    gap: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -647,6 +714,7 @@ section.hf-categories .hf-category .hf-forum-list .hf-forum .hf-forum-lastpost i
     width: 30px;
     height: 30px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 section.hf-stats {
@@ -823,8 +891,13 @@ footer {
         height: 75px;
         padding: 0px 20px;
     }
+    .img-navbar {
+        width: 50px;
+        height: 50px;
+    }
     #nav-user img {
         width: 50px;
+        height: 50px;
     }
     .nav-username ul {
         display: flex;
@@ -878,13 +951,22 @@ footer {
     .stats-newer {
         border-bottom: 0;
         border-right: 1px solid var(--border);
-        background: inherit;
+        background: inherit!important;
         display: flex;
-        align-items: center;
+        align-items: start;
+        flex-direction: column;
+        text-transform: uppercase;
+        justify-content: center;
+        font-size: 12px!important;
+    }
+    .stats-newer b {
+        font-size: 25px;
+        text-transform: none;
     }
     .stats-stats {
         border-right: 1px solid var(--border);
         border-top: 1px solid var(--border);
+        text-transform: uppercase;
     }
     .stats-groups {
         border-bottom: 0;
@@ -892,18 +974,14 @@ footer {
         flex-wrap: wrap;
         gap: 10px;
     }
-    .stats-online {}
     .stats-last24 {
         border-bottom: 0;
-    }
-    .stats-news {
-        /* height: 100px; */
     }
     .stats-creds {
         border-left: 1px solid var(--border);
     }
     .bluedrxgs {
-        background: inherit;
+        background: inherit!important;
         border-top: 1px solid var(--border);
         border-left: 1px solid var(--border);
         border-bottom: 0;

@@ -24,12 +24,11 @@
     <div id="overlay" class="hidden" onclick="hideSidebar()"></div>
 
     <!-- Menú lateral móvil (solo visible cuando se activa) -->
-    <div id="mobile-sidebar">
-
+    <div id="mobile-sidebar" class="rojos">
         <!-- Perfil del usuario en el sidebar -->
         <div class="side-character">
             <button class="notif-button" aria-label="Notificaciones">!</button>
-            <img src="https://placehold.co/100x100" />
+            <div class="side-character-img"><img src="https://i.pinimg.com/736x/d3/37/ba/d337ba495c180d816869f85ae50d9492.jpg" /></div>
             <div class="side-username">
                 David Weber
                 <ul>
@@ -62,39 +61,39 @@
             <div class="content-scroll">
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="staff">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="rojos">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="verdes">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="verdes">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="naranjas">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b  class="rojos">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="verdes">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="naranjas">character</b></span>
                 </a>
                 <a class="lastest-thread">
                     <span>Titulo del tema</span>
-                    <span>Fecha hora por <b>character</b></span>
+                    <span>Fecha hora por <b class="staff">character</b></span>
                 </a>
             </div>
         </div>
@@ -130,7 +129,7 @@
             <!-- Usuario activo -->
             <div id="nav-user" onclick="handleNavUserClick()">
                 <!-- TODO: Add notifications -->
-                <img src="https://placehold.co/100x100" />
+                <div class="img-navbar rojos"><img src="https://i.pinimg.com/736x/d3/37/ba/d337ba495c180d816869f85ae50d9492.jpg" /></div>
                 <div class="nav-username">
                     <span>Hola, <b>David Weber</b></span>
                     <ul>
@@ -154,7 +153,7 @@
         <section class="hf-announcements">
             <!-- Imagen decorativa o representativa -->
             <div class="hf-announcements-img">
-                <img src="https://placehold.co/100x100" />
+                <div class="hf-announcements-img-container"><img src="https://placehold.co/100x100" /></div>
             </div>
             <!-- Texto principal del tablón -->
             <div class="hf-announcements-txt">
@@ -251,14 +250,12 @@
         <!-- Sección para categorías y subforos -->
 
         <section class="hf-categories">
-
             <!-- Contenedor de una sola categoría -->
             <div class="hf-category">
                 <div class="hf-category-name">Tu primera categoría</div>
 
                 <!-- Lista de foros dentro de esta categoría -->
                 <div class="hf-forum-list">
-
                     <!-- Foro dentro de la categoría -->
                     <div class="hf-forum">
                         <!-- TODO: Add image -->
@@ -313,24 +310,44 @@
         <!-- Sección de estadísticas del foro -->
 
         <section class="hf-stats">
-            <div class="stats-newer">Bienvenido, Mia Wallace</div>
+            <div class="stats-newer">Bienvenido, <b class="verdes">Mia Wallace</b></div>
             <div class="stats-stats">
                 <span><b>0000</b> Posts</span> <span><b>0000</b> Cuentas</span>
             </div>
             <div class="stats-groups">
-                <a href="">s</a> <a href="">r</a> <a href="">n</a> <a href="">v</a>
-                <a href="">i</a>
+                <a href="" class="staff">s</a> <a href="" class="rojos">r</a> <a href="" class="naranjas">n</a> <a href="" class="verdes">v</a>
+                <a href="" class="inactivos">i</a>
             </div>
             <div class="stats-online">
                 <div class="content-scroll">
-                    mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario,
-                    princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy
+                    <b class="rojos">mario mario</b>, <b class="verdes">luigi mario</b>,
+                    <b class="rojos">princess peach</b>,
+                    <b class="inactivos">bowser</b>, <b class="staff">toad</b>,
+                    <b class="naranjas">baby mario</b>, <b class="verdes">daisy</b>
                 </div>
             </div>
             <div class="stats-last24">
                 <div class="content-scroll">
-                    mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario,
-                    princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy, mario mario, luigi mario, princess peach, bowser, toad, baby mario, daisy
+                    <b class="rojos">mario mario</b>, <b class="verdes">luigi mario</b>,
+                    <b class="rojos">princess peach</b>,
+                    <b class="inactivos">bowser</b>, <b class="staff">toad</b>,
+                    <b class="naranjas">baby mario</b>, <b class="verdes">daisy</b>,
+                    <b class="rojos">mario mario</b>, <b class="verdes">luigi mario</b>,
+                    <b class="rojos">princess peach</b>,
+                    <b class="inactivos">bowser</b>, <b class="staff">toad</b>,
+                    <b class="naranjas">baby mario</b>, <b class="verdes">daisy</b>,
+                    <b class="rojos">mario mario</b>, <b class="verdes">luigi mario</b>,
+                    <b class="rojos">princess peach</b>,
+                    <b class="inactivos">bowser</b>, <b class="staff">toad</b>,
+                    <b class="naranjas">baby mario</b>, <b class="verdes">daisy</b>,
+                    <b class="rojos">mario mario</b>, <b class="verdes">luigi mario</b>,
+                    <b class="rojos">princess peach</b>,
+                    <b class="inactivos">bowser</b>, <b class="staff">toad</b>,
+                    <b class="naranjas">baby mario</b>, <b class="verdes">daisy</b>,
+                    <b class="rojos">mario mario</b>, <b class="verdes">luigi mario</b>,
+                    <b class="rojos">princess peach</b>,
+                    <b class="inactivos">bowser</b>, <b class="staff">toad</b>,
+                    <b class="naranjas">baby mario</b>, <b class="verdes">daisy</b>
                 </div>
             </div>
             <div class="stats-news">
