@@ -16,6 +16,7 @@
     <meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}" /> {T_HEAD_STYLESHEET} {CSS}
     <link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}" />
     <link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jeexare/hells-foundation@main/header.css">
     <script src="{JQUERY_PATH}" type="text/javascript"></script>
     <!-- BEGIN switch_recent_jquery -->
     <script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"></script>
@@ -377,45 +378,18 @@
             <a id="top" name="top" accesskey="t"></a>
             {JAVASCRIPT}
 
-            <div id="page-header">
-              <div class="headerbar">
-                <div class="inner">
-                  <span class="corners-top"><span></span></span>
-
-                <div id="logo-desc">
-                    <a href="{U_INDEX}" id="logo"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}" /></a>
-                    <!-- BEGIN switch_h1 -->
-                    <div id="site-title">{switch_h1.MAIN_SITENAME}</div>
+             <!-- BEGIN switch_h1 -->
+                    <header>{switch_h1.MAIN_SITENAME}</header>
                     <!-- END switch_h1 -->
-                    <!-- BEGIN switch_desc -->
-                    <p>{switch_desc.SITE_DESCRIPTION}</p>
-                    <!-- END switch_desc -->
-                </div>
-
-                <span class="corners-bottom"><span></span></span>
-        </div>
-    </div>
-
+            
+            <div id="page-header">
     <div class="navbar">
         <div class="inner">
-            <span class="corners-top"><span></span></span>
 
             <ul class="linklist navlinks{NAVBAR_BORDERLESS}">
                 <li>{GENERATED_NAV_BAR}</li>
             </ul>
 
-            <!-- BEGIN switch_search_box -->
-            <div id="search-box">
-                <form method="get" action="{ACTION_SEARCH}" id="search">
-                    <p class="nomargin">
-                        <input type="text" name="search_keywords" id="keywords" maxlength="128" class="inputbox search" value="{L_SEARCH}..." onclick="if (this.value == '{L_SEARCH}...') this.value = '';" onblur="if (this.value == '') this.value = '{L_SEARCH}...';" />                        {JS_SESSION_ID_INPUT}
-                        <input class="button2" type="submit" value="{L_SEARCH}" />
-                    </p>
-                </form>
-            </div>
-            <!-- END switch_search_box -->
-
-            <span class="corners-bottom"><span></span></span>
         </div>
     </div>
 
@@ -432,8 +406,8 @@
                     </ul>
                 </div>
                 <span class="corners-bottom"><span></span></span>
-            </div>
         </div>
+    </div>
     </div>
     <!-- END switch_ticker_new -->
 

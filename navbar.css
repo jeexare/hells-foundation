@@ -1,0 +1,110 @@
+/* ------------------------------------ */
+
+
+/* NAVBAR SUPERIOR                      */
+
+
+/* ------------------------------------ */
+
+nav {
+    background: var(--black);
+    width: 100vw;
+    height: 2.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Info de usuario en navbar */
+
+#nav-user {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 0.5rem;
+}
+
+.img-navbar {
+    width: 25px;
+    height: 25px;
+    background: var(--groups);
+    border-radius: 100%;
+    border: 1px solid var(--border);
+}
+
+#nav-user img {
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.nav-username {}
+
+.nav-username span {}
+
+.nav-username b {
+    font-weight: 900;
+}
+
+.nav-username ul {
+    display: none;
+}
+
+#nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    nav {
+        height: 75px;
+        padding: 0px 20px;
+    }
+    .img-navbar {
+        width: 50px;
+        height: 50px;
+    }
+    #nav-user img {
+        width: 50px;
+        height: 50px;
+    }
+    .nav-username ul {
+        display: flex;
+        list-style-type: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        gap: 5px;
+    }
+    .nav-username ul li a {
+        text-decoration: none;
+        color: var(--grey);
+        font-size: 12px;
+    }
+    .nav-username ul li a:hover {
+        color: var(--accent);
+    }
+    #nav-links {
+        display: flex;
+        gap: 10px;
+        text-transform: uppercase;
+    }
+    #nav-links a {
+        text-decoration: none;
+        color: var(--color);
+        transition: 0.3s ease-in-out;
+    }
+    #nav-links a:hover {
+        border-bottom: 2px solid var(--accent);
+        font-weight: 900;
+        transition: 0.3s ease-in-out;
+    }
+}
