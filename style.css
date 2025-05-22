@@ -144,29 +144,6 @@ body.no-scroll {
 /* ------------------------------------ */
 
 
-/* ENCABEZADO                           */
-
-
-/* ------------------------------------ */
-
-header {
-    grid-area: header;
-    font-family: var(--header);
-    width: 100vw;
-    height: 300px;
-    position: relative;
-    font-size: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    padding-left: 1.5rem;
-    padding-bottom: 1.5rem;
-    align-items: end;
-}
-
-
-/* ------------------------------------ */
-
-
 /* NAVBAR SUPERIOR                      */
 
 
