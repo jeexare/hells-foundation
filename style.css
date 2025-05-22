@@ -25,6 +25,7 @@
 :root {
     --header: "Nowharehouse";
     --main: Roboto, sans-serif;
+    --serif: "Playfair Display";
     --black: #030303;
     --black2: #101010;
     --black3: #323232;
@@ -585,8 +586,7 @@ section.hf-categories .hf-category .hf-forum-list .hf-forum {
 }
 
 section.hf-categories .hf-category .hf-forum-list .hf-forum a.hf-forum-name {
-    /*TODO: ADD TO ROOT*/
-    font-family: serif;
+    font-family: var(--serif);
     color: var(--accent);
     padding: 20px;
     box-sizing: border-box;
@@ -868,6 +868,45 @@ footer {
     .hf-forum-name {
         text-transform: uppercase;
         padding: 20px 40px!important;
+    }
+    section.hf-stats {
+        grid-template-areas: "news news news news" "newer online online creds" "stats online online creds" "groups online online creds" "groups last24 last24 bluedrxgs";
+        height: 400px;
+        grid-template-columns: auto;
+        grid-template-rows: 80px 80px 80px 80px 80px;
+    }
+    .stats-newer {
+        border-bottom: 0;
+        border-right: 1px solid var(--border);
+        background: inherit;
+        display: flex;
+        align-items: center;
+    }
+    .stats-stats {
+        border-right: 1px solid var(--border);
+        border-top: 1px solid var(--border);
+    }
+    .stats-groups {
+        border-bottom: 0;
+        border-right: 1px solid var(--border);
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .stats-online {}
+    .stats-last24 {
+        border-bottom: 0;
+    }
+    .stats-news {
+        /* height: 100px; */
+    }
+    .stats-creds {
+        border-left: 1px solid var(--border);
+    }
+    .bluedrxgs {
+        background: inherit;
+        border-top: 1px solid var(--border);
+        border-left: 1px solid var(--border);
+        border-bottom: 0;
     }
 }
 
